@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD</title>
+    <!-- ==== CSS ==== -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">"NAKSHATRA"</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#"></a>HOME</li>
+            <li><a href="#"></a>MENU</li>
+            <li><a href="#"></a>OFFER</li>
+            <li><a href="#"></a>GALLERY</li>
+            <li><a href="#"></a>About</li>
+            <li class="ctn"><a  href="#"></a>Contact</li>
+        </ul>
+       <div class="mobile-nav">
+        <img src="./img/menu-btn.png" alt="" class="menu-btn">
+        <h1 class="close-btn">X</h1>
+       </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>Welcome to us!</h1>
+            <div class="line"></div>
+            <h1>Boost your taste with non-stop varieties!!</h1>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </header>
+    <!-- == Dishes == -->
+    <section class="dishes">
+        <div class="title">
+            <h1>What's new</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="./img/dish1.jpg" alt="">
+                <h4>Mango Coldcoffee</h4>
+                <p>Enrich your taste with a new variety o fcold coffee!!</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="./img/dish2.jpg" alt="">
+                <h4>Apple Pie</h4>
+                <p>A special fruit pie served with whipped cream and icecream</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <section class="food">
+        <div class="row">
+            <div class="col content-col">
+                <h1>OUR POPULAR DISHES</h1>
+                <div class="line"></div>
+                <p>Check our popular dishes that will surely make you love !</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="./img/big3.jpg" alt="">
+                    <img src="./img/big4.jpg" alt="">
+                    <img src="./img/big5.jpg" alt="">
+                    <img src="./img/big7.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <p>Hotel Nakshatra,Pune | Phone: 830-123-456 | Email: example@gmail.com</p>
+        <p>Copyright © 2023 Snehal Tambe</p>
+    </section>
+
+    <script>
+        const mobileNav = document.querySelector('.mobile-nav')
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+        const closeBtn = document.querySelector('.close-btn')
+
+        mobileNav.addEventListener('click',(e)=>{
+            navlinks.classList.toggle('mobile-menu')
+            if(e.target === menuBtn){
+                menuBtn.replaceWith(closeBtn)
+                closeBtn.style.display = 'block'
+            }
+            if(e.target === closeBtn){
+                closeBtn.replaceWith(menuBtn)
+            }
+        })
+    </script>
+</body>
+</html>
